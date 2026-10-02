@@ -65,15 +65,156 @@ a.contact { color: #2563eb; text-decoration: none; }
 footer {
   background: #0f172a; color: #cbd5e1; text-align: center; padding: 22px;
 }
-@media (max-width: 700px) {
-  nav { flex-direction: column; gap: 10px; }
-  nav a { margin: 0 7px; }
-  .hero-inner { flex-direction: column; text-align: center; }
-  .hero h1 { font-size: 31px; }
-  .profile { width: 155px; height: 155px; }
-  .grid, .info-grid { grid-template-columns: 1fr; }
-  table { font-size: 13px; }
-  th, td { padding: 8px; }
+/* =========================
+   RESPONSIVE DESIGN
+   Desktop: 1025px and above
+   Tablet: 601px - 1024px
+   Mobile: 600px and below
+   ========================= */
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .container { max-width: 1050px; }
+  .hero { padding: 65px 6%; }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  nav {
+    padding: 14px 4%;
+  }
+
+  nav a {
+    margin-left: 12px;
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero-inner {
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .profile {
+    width: 165px;
+    height: 165px;
+  }
+
+  .container {
+    padding: 32px 25px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  nav {
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+
+  nav .logo {
+    font-size: 18px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 3px 6px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 40px 18px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .profile {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+    line-height: 1.2;
+  }
+
+  .hero h3 {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 22px 12px;
+  }
+
+  .card {
+    padding: 20px 16px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  .objective {
+    font-size: 15px;
+  }
+
+  .grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Make the education table scroll horizontally on small screens */
+  .card#education {
+    overflow: hidden;
+  }
+
+  .card#education table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .card#education th,
+  .card#education td {
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 18px 10px;
+  }
 }
 </style>
 </head>
